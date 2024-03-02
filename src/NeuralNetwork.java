@@ -3,15 +3,18 @@ import java.util.List;
 public class NeuralNetwork {
 
     Matrix weights_ih, weights_ho, bias_h, bias_o;
-    double l_rate = 0.01;
+    double l_rate;
 
     /**
      * Creates a neural network
      * @param i # of input parameters
      * @param h # of hidden nodes
      * @param o # of output values
+     * @param l step rate
      */
-    public NeuralNetwork(int i, int h, int o) {
+    public NeuralNetwork(int i, int h, int o, double l) {
+        l_rate = l;
+
         weights_ih = new Matrix(h,i);
         weights_ho = new Matrix(o,h);
 
@@ -77,5 +80,7 @@ public class NeuralNetwork {
             this.train(X[sampleN], Y[sampleN]);
         }
     }
+
+    public void setStepRate(double l) {l_rate = l;}
 
 }

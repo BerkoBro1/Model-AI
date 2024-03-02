@@ -24,7 +24,8 @@ public class Main {
         //first input is number of input nodes
         //second input is number of hidden nodes
         //third input is number of output nodes
-        NeuralNetwork nn = new NeuralNetwork(2, 10, 1);
+        //furth input is the step rate
+        NeuralNetwork nn = new NeuralNetwork(2, 10, 1, .01);
 
         //fits the neural network to the test cases given in X and Y
         nn.fit(X, Y, 50000);
