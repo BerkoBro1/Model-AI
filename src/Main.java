@@ -29,7 +29,7 @@ public class Main {
         //fits the neural network to the test cases given in X and Y
         nn.fit(X, Y, 50000);
 
-        //test inputs
+        //example inputs
         double[][] input = {{0,1}, {0,0}};
         List<Double> output;
 
